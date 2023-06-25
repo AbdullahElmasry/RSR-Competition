@@ -1,6 +1,3 @@
-#include <NewPing.h>
-#include <Servo.h>
-
 #define white LOW
 #define black HIGH
 
@@ -25,7 +22,7 @@
 
 
 
-// Turning all Motors in forward direction
+// Turning all Motors in the forward direction
 void Forward_dir(){
     digitalWrite(IN1,HIGH);
     digitalWrite(IN2,LOW);
@@ -33,7 +30,7 @@ void Forward_dir(){
     digitalWrite(IN4,LOW);
 }
 
-// Turning all Motors in backward direction
+// Turning all Motors in the backward direction
 void Backward_dir(){
   digitalWrite(IN1,LOW);
   digitalWrite(IN2,HIGH);
@@ -69,7 +66,7 @@ void Left_dir(){
 // Line Follower Function (:
 void LineFollowerMode(){
 
-  // Reading the sensors value
+  // Reading the sensor's value
   int sensorState_R = digitalRead(IR_Input_R);
   int sensorState_L = digitalRead(IR_Input_L);
   int sensorState_M = digitalRead(IR_Input_M);
@@ -95,10 +92,6 @@ void LineFollowerMode(){
 // black reads HIGH  1
 
 
-
-
-
-
 void setup() {
 
   // Motors Configurations
@@ -117,13 +110,12 @@ void setup() {
 
 
 void loop() {
-  // Calling The Operating Fucnction
+  // Calling The Operating Function
   LineFollowerMode();
 
 }
 
-// Unfortunately I Wasn't Lucky In This Competetion 
-// But I Promise I Will Make My Own Luck By The Next One, So Wait For Me ...
+
 
 
 
